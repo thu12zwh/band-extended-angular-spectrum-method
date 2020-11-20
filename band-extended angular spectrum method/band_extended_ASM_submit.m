@@ -24,7 +24,7 @@ disp('analytical intergral:')
 tic
 for j = 1:n/2
       fun = @(xn) 1/2/pi*z./sqrt((X(j)-xn).^2+z^2).*(1./sqrt((X(j)-xn).^2+z^2)...
-               -1i*k/pi).*exp(1i*k*sqrt((X(j)-xn).^2+z^2))./sqrt((X(j)-xn).^2+z^2);
+               -1i*k).*exp(1i*k*sqrt((X(j)-xn).^2+z^2))./sqrt((X(j)-xn).^2+z^2);
       uu(j,1) = integral(fun,-(r-1)*pitch,r*pitch);
 end
 toc
