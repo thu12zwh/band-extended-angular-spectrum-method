@@ -69,7 +69,7 @@ figure,plot(x(n/2-n/4+1:n/2+n/4),amplitude_asm_li);title('band-limited ASM ampli
 %% entended band ASM
 iflag = -1;
 eps = 10^(-12);           % accuracy of NUFFT
-K = n/2/max(fx);
+K = n/2/max(abs(fx));
 fcn = 1/2*sqrt(n/lam/z);  % f_extend
 ss = fcn/max(abs(fx));
 zc = n*pitch^2/lam;
